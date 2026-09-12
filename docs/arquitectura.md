@@ -1,8 +1,8 @@
-# Arquitectura general propuesta
+# Arquitectura general
 
-> **Decisión técnica propuesta:** este documento pertenece a la Fase 2 y está
-> pendiente de auditoría de Work. Describe una dirección, no una implementación
-> ni una aprobación. El repositorio continúa sin stack instalado.
+> **Decisión técnica aceptada:** Work aprobó en la Fase 2 la arquitectura y el
+> stack descritos aquí. El repositorio continúa sin implementación ni stack
+> instalado; las decisiones aplazadas conservan ese estado.
 
 ## Forma del sistema y stack
 
@@ -21,7 +21,7 @@ móvil. Esto no excluye que los tres perfiles funcionen en ambos tamaños.
 | Módulo | Responsabilidad y datos de los que es autoridad |
 | --- | --- |
 | `accounts` | Identidad, usuario propio mínimo, autenticación y pertenencia a roles; no confunde el rol Personal con `is_staff`. |
-| `profiles` | Datos de negocio de clientes y personal, contactos, locales y catálogo de funciones o tipos de personal. |
+| `profiles` | Datos de negocio de clientes y personal, contactos y catálogo de funciones o tipos de personal. En el MVP cada Cliente corresponde a un restaurante o local; varios locales son una ampliación futura. |
 | `operations` | Solicitudes, plazas, asignaciones, declaraciones de fin, confirmaciones y sus transiciones. |
 | `pricing` | Tarifas de venta, retribuciones, excepciones y copia de la tarifa aplicada a cada operación. |
 | `finance` | Movimientos, cobros, pagos, gastos, bonos, multas y saldos derivados, sin decidir aún sus reglas abiertas. |
@@ -74,7 +74,7 @@ carpetas creadas en esta fase.**
 6. La vista devuelve HTML completo o un fragmento HTMX; la presentación no se
    convierte en fuente de verdad.
 
-## Decisiones arquitectónicas propuestas
+## Decisiones arquitectónicas aprobadas
 
 - **Datos:** PostgreSQL se usará desde el primer entorno funcional y en pruebas
   de integración. Los importes serán decimales; las fechas, completas y con zona
@@ -106,8 +106,12 @@ El contexto y el contraste de alternativas constan en el
 ## Decisiones pendientes
 
 El **modelo lógico detallado**, cardinalidades, restricciones y matriz de estados
-corresponden a la Fase 3. En esa fase deberán aclararse agrupación de solicitudes,
-contactos y locales, edición tras asignación parcial, vigencia de tarifas,
+corresponden a la Fase 3. La especificación operativa de la Fase 3A está en
+[`dominio.md`](dominio.md), pendiente de auditoría. En el MVP, un Cliente
+corresponde a un restaurante o local; gestionar varios locales queda como
+ampliación futura. Siguen pendientes el número de cuentas y contactos por
+Cliente, la compatibilidad de roles, la agrupación de solicitudes, la edición
+tras asignación parcial, la vigencia de tarifas,
 cancelaciones y sustituciones. Antes de implementar cálculos se resolverán
 precisión y redondeo, descansos, impuestos, pagos parciales y anticipos, y efectos
 de bonos y multas. Antes del flujo contractual o de altas se decidirán firma y
@@ -118,4 +122,5 @@ definirse antes de cargar por primera vez datos personales o documentos reales,
 incluso en desarrollo o preproducción. Antes de producción se fijarán
 proveedores, servicios auxiliares, copias y observabilidad.
 
-Nada de lo anterior queda resuelto por esta propuesta.
+Nada de lo anterior queda resuelto por la aprobación de la arquitectura ni por
+la documentación de la Fase 3A.

@@ -1,6 +1,6 @@
 # ADR 0001: arquitectura y stack
 
-- **Estado:** PROPUESTO, pendiente de auditoría de Work
+- **Estado:** ACEPTADO por Work (arquitectura y stack); decisiones aplazadas vigentes
 - **Fecha:** 2026-09-12
 - **Alcance:** Fase 2 documental; sin implementación
 
@@ -22,14 +22,14 @@ separar prematuramente interfaces y reglas.
 | Next.js con PostgreSQL | Buen ecosistema para interfaces React y renderizado en servidor. | Hay que elegir y ensamblar acceso a datos, autenticación, autorización, auditoría y disciplina transaccional; aumenta la superficie de decisiones para este dominio. |
 | Frontend separado con API | Clientes desacoplados y contrato reutilizable para múltiples consumidores. | Dos aplicaciones, contrato y despliegues; duplica coordinación de autenticación, errores y validación y resulta prematuro sin una necesidad confirmada de API pública o múltiples clientes. |
 
-## Decisión propuesta
+## Decisión aceptada
 
 Adoptar un **monolito modular Django con PostgreSQL**, Python 3.13, Django 5.2
 LTS, PostgreSQL 17, templates Django, HTMX y Tailwind CSS compilado. Frontend y
 backend se servirán bajo el mismo origen. Los límites y responsabilidades están
 en la [arquitectura general](../arquitectura.md) y no se repiten aquí.
 
-Las fuentes oficiales identificadas para verificar esta propuesta son las notas de
+Las fuentes oficiales identificadas para verificar esta decisión son las notas de
 [Django 5.2](https://docs.djangoproject.com/en/5.2/releases/5.2/) (LTS y soporte
 de Python 3.13), la documentación de
 [bases de datos de Django 5.2](https://docs.djangoproject.com/en/5.2/ref/databases/)
@@ -66,6 +66,9 @@ realmente autónomos, requisitos de escalado incompatibles por módulo o una
 experiencia cliente cuyo estado e interacción no puedan sostenerse razonablemente
 con HTML progresivo. Esas circunstancias justificarían evaluar una API o un
 frontend separado; no implican que sean necesarios hoy.
+
+La especificación operativa preparada en la Fase 3A se encuentra en
+[`docs/dominio.md`](../dominio.md) y permanece pendiente de auditoría.
 
 ## Decisiones aplazadas
 

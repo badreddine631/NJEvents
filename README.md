@@ -7,18 +7,21 @@ hostelería. El producto contempla tres roles: **Administración**, **Cliente** 
 ## Estado
 
 El repositorio está **sin implementación**: no contiene aplicación, framework,
-dependencias, base de datos ni comandos de arranque. La **Fase 1 está aprobada
-por Work** y la **Fase 2**, todavía documental, deja una propuesta de arquitectura
-y stack **pendiente de auditoría de Work**.
+dependencias, base de datos ni comandos de arranque. Las **Fases 1 y 2 están
+aprobadas por Work**. La documentación de la **Fase 3A** sobre solicitudes de
+extras y turnos está preparada y pendiente de auditoría; la Fase 3 completa
+continúa abierta.
 
 ## Documentación
 
 - [`docs/estado-proyecto.md`](docs/estado-proyecto.md): inventario histórico,
   resumen funcional trazable, estado de las fases y asuntos abiertos.
-- [`docs/arquitectura.md`](docs/arquitectura.md): propuesta concreta de
-  arquitectura general para las fases posteriores.
+- [`docs/arquitectura.md`](docs/arquitectura.md): arquitectura general aprobada
+  y decisiones todavía pendientes.
+- [`docs/dominio.md`](docs/dominio.md): especificación operativa revisable de
+  solicitudes de extras y turnos (Fase 3A).
 - [`docs/decisiones/0001-arquitectura-y-stack.md`](docs/decisiones/0001-arquitectura-y-stack.md):
-  ADR propuesto sobre arquitectura y stack.
+  ADR aceptado sobre arquitectura y stack y decisiones aplazadas.
 - [`AGENTS.md`](AGENTS.md): alcance y reglas de trabajo para contribuciones.
 
 ## Fuente funcional

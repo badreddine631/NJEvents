@@ -9,12 +9,15 @@ sin destruir ni mezclar trabajo previo.
 ## Fase vigente y alcance
 
 - La fase 1 está aprobada por Work.
-- La fase 2 es exclusivamente documental y queda pendiente de auditoría de Work.
-- El alcance autorizado se limita a modificar `README.md`, `AGENTS.md` y
-  `docs/estado-proyecto.md`, y a crear `docs/arquitectura.md` y
-  `docs/decisiones/0001-arquitectura-y-stack.md`.
-- **STOP:** al completar y aportar las evidencias de esta fase, detente. No
-  autorices ni inicies fases futuras, ni instales o implementes el stack.
+- La fase 2 documental está aprobada por Work.
+- La fase 3A autoriza exclusivamente documentar las reglas operativas de
+  solicitudes de extras y actualizar el estado y los enlaces existentes.
+- El alcance autorizado se limita a modificar `README.md`, `AGENTS.md`,
+  `docs/estado-proyecto.md`, `docs/arquitectura.md` y
+  `docs/decisiones/0001-arquitectura-y-stack.md`, y a crear `docs/dominio.md`.
+- **STOP:** al preparar y aportar las evidencias de la fase 3A, detente. No la
+  apruebes, no cierres la fase 3, no diseñes tablas ni instales o implementes el
+  stack.
 
 ## Trazabilidad
 
