@@ -1,15 +1,18 @@
 # Instrucciones para agentes
 
 Estas instrucciones se aplican a todo el repositorio. Antes de trabajar, lee las
-instrucciones superiores aplicables, este archivo, `README.md` y
-`docs/estado-proyecto.md`, e inspecciona el estado de Git sin destruir ni mezclar
-trabajo previo.
+instrucciones superiores aplicables, este archivo, `README.md`,
+`docs/estado-proyecto.md`, `docs/arquitectura.md` y
+`docs/decisiones/0001-arquitectura-y-stack.md`, e inspecciona el estado de Git
+sin destruir ni mezclar trabajo previo.
 
 ## Fase vigente y alcance
 
-- La fase 1 es exclusivamente documental y queda pendiente de auditoría de Work.
-- El alcance autorizado se limita a `README.md`, `AGENTS.md`, `.gitignore`,
-  `.editorconfig` y `docs/estado-proyecto.md`.
+- La fase 1 está aprobada por Work.
+- La fase 2 es exclusivamente documental y queda pendiente de auditoría de Work.
+- El alcance autorizado se limita a modificar `README.md`, `AGENTS.md` y
+  `docs/estado-proyecto.md`, y a crear `docs/arquitectura.md` y
+  `docs/decisiones/0001-arquitectura-y-stack.md`.
 - **STOP:** al completar y aportar las evidencias de esta fase, detente. No
   autorices ni inicies fases futuras, ni instales o implementes el stack.
 
