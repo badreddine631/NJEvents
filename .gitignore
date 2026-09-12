@@ -1,0 +1,41 @@
+# Entornos y configuración local
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Dependencias y cachés
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Logs y cobertura
+*.log
+logs/
+.coverage
+htmlcov/
+coverage/
+
+# Salidas generadas
+build/
+dist/
+staticfiles/
+*.egg-info/
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Documentos privados y copias locales
+private-media/
+private-docs/
+backups/
