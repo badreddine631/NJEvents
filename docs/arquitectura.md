@@ -1,8 +1,8 @@
-# Arquitectura general propuesta
+# Arquitectura general
 
-> **Decisión técnica propuesta:** este documento pertenece a la Fase 2 y está
-> pendiente de auditoría de Work. Describe una dirección, no una implementación
-> ni una aprobación. El repositorio continúa sin stack instalado.
+> **Decisión técnica aceptada:** Work aprobó en la Fase 2 la arquitectura y el
+> stack descritos aquí. El repositorio continúa sin implementación ni stack
+> instalado; las decisiones aplazadas conservan ese estado.
 
 ## Forma del sistema y stack
 
@@ -74,7 +74,7 @@ carpetas creadas en esta fase.**
 6. La vista devuelve HTML completo o un fragmento HTMX; la presentación no se
    convierte en fuente de verdad.
 
-## Decisiones arquitectónicas propuestas
+## Decisiones arquitectónicas aprobadas
 
 - **Datos:** PostgreSQL se usará desde el primer entorno funcional y en pruebas
   de integración. Los importes serán decimales; las fechas, completas y con zona
@@ -106,7 +106,9 @@ El contexto y el contraste de alternativas constan en el
 ## Decisiones pendientes
 
 El **modelo lógico detallado**, cardinalidades, restricciones y matriz de estados
-corresponden a la Fase 3. En esa fase deberán aclararse agrupación de solicitudes,
+corresponden a la Fase 3. La especificación operativa de la Fase 3A está en
+[`dominio.md`](dominio.md), pendiente de auditoría. Aún deberán aclararse
+agrupación de solicitudes,
 contactos y locales, edición tras asignación parcial, vigencia de tarifas,
 cancelaciones y sustituciones. Antes de implementar cálculos se resolverán
 precisión y redondeo, descansos, impuestos, pagos parciales y anticipos, y efectos
@@ -118,4 +120,5 @@ definirse antes de cargar por primera vez datos personales o documentos reales,
 incluso en desarrollo o preproducción. Antes de producción se fijarán
 proveedores, servicios auxiliares, copias y observabilidad.
 
-Nada de lo anterior queda resuelto por esta propuesta.
+Nada de lo anterior queda resuelto por la aprobación de la arquitectura ni por
+la documentación de la Fase 3A.

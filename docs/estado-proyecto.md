@@ -13,14 +13,16 @@ Este inventario se conserva como registro histórico del inicio de la Fase 1.
 
 - **Fase 1:** aprobada por Work. Su corrección de trazabilidad quedó incorporada
   en `main` mediante el commit `e2b87ecc3bb69c13c0bbf870d9a3cc95b7c30cce`.
-- **Fase 2:** propuesta documental de arquitectura y stack preparada y pendiente
-  de auditoría de Work. El repositorio sigue sin implementación, dependencias ni
-  base de datos.
+- **Fase 2:** arquitectura y stack documentales aprobados por Work e incorporados
+  en `main` mediante el commit de fusión
+  `9a024bf5d785e6b1afb44e84acfa54a7f0cc9d3e`.
+- **Fase 3A:** especificación de solicitudes de extras y turnos preparada en
+  [`dominio.md`](dominio.md), pendiente de auditoría de Work.
+- **Fase 3 completa:** abierta; no se ha aprobado ni diseñado el modelo de datos.
 
-La propuesta se desarrolla en [`arquitectura.md`](arquitectura.md) y la decisión
-se razona, sin estar aprobada, en el
-[`ADR 0001`](decisiones/0001-arquitectura-y-stack.md). Este estado no duplica
-esos documentos ni autoriza una fase posterior.
+La arquitectura aprobada se desarrolla en [`arquitectura.md`](arquitectura.md) y
+se razona en el [`ADR 0001`](decisiones/0001-arquitectura-y-stack.md). La
+aprobación no resuelve las decisiones aplazadas ni autoriza implementación.
 
 ## Base funcional disponible
 
@@ -47,23 +49,27 @@ lectura directa del PDF durante esta fase:
   prioridad indicada es Administración, después Cliente y Personal, y por último
   las secciones restantes.
 
-## Propuesta técnica de Fase 2 (no aprobada ni implementada)
+## Decisión técnica de Fase 2 (aprobada, no implementada)
 
-Se propone un monolito modular con Django 5.2 LTS y Python 3.13, PostgreSQL 17,
+Work aprobó un monolito modular con Django 5.2 LTS y Python 3.13, PostgreSQL 17,
 templates, HTMX y Tailwind CSS compilado. Las versiones de parche exactas deberán
 validarse al preparar el entorno. No se han instalado dependencias ni creado
 estructuras.
 
-La propuesta contempla sesiones en servidor; permisos por rol y recurso
+La decisión contempla sesiones en servidor; permisos por rol y recurso
 aplicados en backend; documentos privados; importes decimales; tiempos con zona
 horaria; y un historial de revisiones para las correcciones. El modelo de dominio
 distinguiría explícitamente **solicitud**, **plaza**, **asignación**,
-**declaración**, **confirmación** y **movimiento**. Todo ello sigue siendo una
-propuesta pendiente de revisión, no una decisión técnica aprobada.
+**declaración**, **confirmación** y **movimiento**. El detalle operativo revisable se documenta en [`dominio.md`](dominio.md); sus
+decisiones pendientes no quedan aprobadas por describirse allí. El usuario aclaró
+que, para el MVP, un Cliente corresponde a un restaurante o local; separar
+Cliente y cuenta, conservar la ubicación histórica y dejar varios locales como
+futuro no resuelve aún cuántas cuentas o contactos acceden ni la compatibilidad
+de roles.
 
 ## Pendientes funcionales principales
 
-No se resuelven en esta fase:
+No se resuelven en la Fase 3A:
 
 - agrupación de solicitudes y definición de contactos y locales;
 - bloqueo o edición después de una asignación parcial;
@@ -80,7 +86,8 @@ No se resuelven en esta fase:
 ## Flujo y siguiente control
 
 Work dirige la arquitectura y la auditoría, Codex ejecuta únicamente la tarea
-acotada y el usuario traslada las evidencias a Work. La **Fase 1 está aprobada**
-y la **Fase 2 queda pendiente de auditoría de Work**. Hasta recibir esa revisión
-se aplica el STOP: no comenzar la Fase 3, no instalar el stack y no implementar
+acotada y el usuario traslada las evidencias a Work. Las **Fases 1 y 2 están
+aprobadas**. La **Fase 3A está preparada y pendiente de auditoría** y la Fase 3
+completa permanece abierta. Se aplica el STOP: no aprobar esta entrega, no
+continuar con el modelo de tablas, no instalar el stack y no implementar
 funcionalidad.
