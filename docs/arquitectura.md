@@ -21,7 +21,7 @@ móvil. Esto no excluye que los tres perfiles funcionen en ambos tamaños.
 | Módulo | Responsabilidad y datos de los que es autoridad |
 | --- | --- |
 | `accounts` | Identidad, usuario propio mínimo, autenticación y pertenencia a roles; no confunde el rol Personal con `is_staff`. |
-| `profiles` | Datos de negocio de clientes y personal, contactos, locales y catálogo de funciones o tipos de personal. |
+| `profiles` | Datos de negocio de clientes y personal, contactos y catálogo de funciones o tipos de personal. En el MVP cada Cliente corresponde a un restaurante o local; varios locales son una ampliación futura. |
 | `operations` | Solicitudes, plazas, asignaciones, declaraciones de fin, confirmaciones y sus transiciones. |
 | `pricing` | Tarifas de venta, retribuciones, excepciones y copia de la tarifa aplicada a cada operación. |
 | `finance` | Movimientos, cobros, pagos, gastos, bonos, multas y saldos derivados, sin decidir aún sus reglas abiertas. |
@@ -107,9 +107,11 @@ El contexto y el contraste de alternativas constan en el
 
 El **modelo lógico detallado**, cardinalidades, restricciones y matriz de estados
 corresponden a la Fase 3. La especificación operativa de la Fase 3A está en
-[`dominio.md`](dominio.md), pendiente de auditoría. Aún deberán aclararse
-agrupación de solicitudes,
-contactos y locales, edición tras asignación parcial, vigencia de tarifas,
+[`dominio.md`](dominio.md), pendiente de auditoría. En el MVP, un Cliente
+corresponde a un restaurante o local; gestionar varios locales queda como
+ampliación futura. Siguen pendientes el número de cuentas y contactos por
+Cliente, la compatibilidad de roles, la agrupación de solicitudes, la edición
+tras asignación parcial, la vigencia de tarifas,
 cancelaciones y sustituciones. Antes de implementar cálculos se resolverán
 precisión y redondeo, descansos, impuestos, pagos parciales y anticipos, y efectos
 de bonos y multas. Antes del flujo contractual o de altas se decidirán firma y

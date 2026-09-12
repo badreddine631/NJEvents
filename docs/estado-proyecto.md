@@ -32,15 +32,17 @@ lectura directa del PDF durante esta fase:
 - **Requisito del PDF (pp. 1–2):** existen los roles Administración, Personal y
   Cliente; hay precios de venta por cliente y función, retribuciones individuales
   por trabajador y excepciones por servicio.
-- **Requisito del PDF (pp. 2–3):** Administración gestiona perfiles, solicitudes,
-  asignaciones y calendarios semanales por cliente y trabajador. «En curso»
-  significa asignado sin cierre confirmado.
+- **Requisito del PDF (pp. 2–3):** Administración gestiona perfiles,
+  calendarios y asignaciones; puede crear, rechazar y modificar solicitudes,
+  además de asignar Personal. «En curso» significa asignado sin cierre
+  confirmado.
 - **Requisito del PDF (pp. 3–4):** Cliente y Personal declaran el fin; si
   coinciden, queda confirmado. Administración puede fijar directamente el valor
   definitivo y, después, solo Administración puede corregirlo.
 - **Requisito del PDF (p. 4):** Cliente solicita cantidad, tipo, fecha y hora de
   inicio, y puede editar o eliminar solicitudes pendientes antes de asignarlas.
-  Personal consulta inicio, ubicación y uniforme.
+  Personal consulta sus propios turnos en curso y completados, incluido inicio,
+  ubicación y uniforme.
 - **Requisito del PDF (pp. 3–4):** se contemplan perfiles, documentación,
   contratos, saldos e historial. Administración registra cobros, pagos, bonos y
   multas.
@@ -71,7 +73,8 @@ de roles.
 
 No se resuelven en la Fase 3A:
 
-- agrupación de solicitudes y definición de contactos y locales;
+- agrupación de solicitudes;
+- número de cuentas y contactos por Cliente, y compatibilidad de roles;
 - bloqueo o edición después de una asignación parcial;
 - precisión monetaria, redondeos y descansos;
 - vigencia temporal de tarifas;
