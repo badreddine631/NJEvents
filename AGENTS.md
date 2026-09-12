@@ -18,15 +18,18 @@ trabajo previo.
 Cada afirmación relevante debe clasificarse con claridad:
 
 - **Requisito del PDF:** regla funcional respaldada por la fuente, conservando
-  su referencia de página.
+  su referencia de página. Si se pospone, conserva su procedencia y su
+  obligatoriedad dentro del producto completo, y se indica cuándo está previsto
+  abordarlo.
 - **Requisito del encargo:** condición impuesta para la tarea o su entrega.
-- **Decisión técnica:** elección aprobada expresamente; no presentar una
-  propuesta como si ya lo fuera.
+- **Decisión técnica:** propuesta o elección aprobada, indicando siempre su
+  estado; una propuesta no equivale a una aprobación.
 - **Mejora:** optimización opcional que no altera silenciosamente el negocio.
-- **Futuro:** trabajo fuera de la fase vigente o asunto aún no resuelto.
+- **Futuro:** funcionalidad nueva, no exigida por el PDF y fuera del MVP.
 
-No inventes reglas para cubrir ambigüedades. Registra los pendientes y solicita
-su validación en la fase correspondiente.
+No inventes reglas para cubrir ambigüedades. Registra cada ambigüedad o decisión
+pendiente como pendiente de resolución, sin convertirla en funcionalidad futura
+ni en decisión aprobada, y solicita su validación en la fase correspondiente.
 
 ## Seguridad y calidad
 
