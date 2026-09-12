@@ -21,13 +21,13 @@ móvil. Esto no excluye que los tres perfiles funcionen en ambos tamaños.
 | Módulo | Responsabilidad y datos de los que es autoridad |
 | --- | --- |
 | `accounts` | Identidad, usuario propio mínimo, autenticación y pertenencia a roles; no confunde el rol Personal con `is_staff`. |
-| `profiles` | Datos de negocio de clientes y personal, contactos, locales y disponibilidad cuando se definan. |
+| `profiles` | Datos de negocio de clientes y personal, contactos, locales y catálogo de funciones o tipos de personal. |
 | `operations` | Solicitudes, plazas, asignaciones, declaraciones de fin, confirmaciones y sus transiciones. |
 | `pricing` | Tarifas de venta, retribuciones, excepciones y copia de la tarifa aplicada a cada operación. |
 | `finance` | Movimientos, cobros, pagos, gastos, bonos, multas y saldos derivados, sin decidir aún sus reglas abiertas. |
 | `documents` | Metadatos, clasificación, vínculo y permisos de documentos almacenados privadamente; contratos sin resolver su firma. |
 | `audit` | Registro inmutable o trazable de acciones relevantes, especialmente correcciones y autoría. |
-| `reporting` | Consultas, calendarios, estadísticas y exportaciones; lee de los módulos autoridad y no reimplementa reglas. |
+| `reporting` | Consultas, calendarios y estadísticas; lee de los módulos autoridad y no reimplementa reglas. |
 
 Las dependencias siguen la propiedad anterior: `operations` consulta identidades
 y perfiles, y solicita cálculos a `pricing`; los hechos confirmados pueden
@@ -111,7 +111,11 @@ contactos y locales, edición tras asignación parcial, vigencia de tarifas,
 cancelaciones y sustituciones. Antes de implementar cálculos se resolverán
 precisión y redondeo, descansos, impuestos, pagos parciales y anticipos, y efectos
 de bonos y multas. Antes del flujo contractual o de altas se decidirán firma y
-datos requeridos. Antes de producción se fijarán conservación documental,
-proveedores, servicios auxiliares, copias, observabilidad y versiones exactas.
+datos requeridos. Las versiones exactas y la compatibilidad de las dependencias
+se verificarán y fijarán al preparar el primer entorno reproducible. La finalidad,
+los datos necesarios, los accesos y las reglas de conservación y borrado deberán
+definirse antes de cargar por primera vez datos personales o documentos reales,
+incluso en desarrollo o preproducción. Antes de producción se fijarán
+proveedores, servicios auxiliares, copias y observabilidad.
 
 Nada de lo anterior queda resuelto por esta propuesta.
